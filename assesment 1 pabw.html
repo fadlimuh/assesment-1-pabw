@@ -13,14 +13,16 @@
   Kelas: D3SI-46-01 </p>
 
   <main>
-  <label for="buku">pilihan buku</label>
+  
+  <label for="jumlah">jumlah buku: </label>
+  <input type="number" id="jumlah" name="jumlah" min="0">
   <select id="buku" name="buku" id="buku">
     <option id="sherlock" value="sherlock">sherlock</option>
     <option id="lupin" value="lupin">lupin</option>
-    <option id="lupin" value="aladin">lupin</option>
+    <option id="aladin" value="aladin">lupin</option>
   </select> <br><br>
 
-  <button onclick="submit"> cek ketersedian buku</button>
+  <button onclick="submit()"> cek ketersedian buku</button>
 </input>
 
 
@@ -29,10 +31,24 @@
 
 <script>
   let buku = [
-    {"nama" : "sherlock", "jumlah":2}
-    {"nama" : "lupin", "jumlah":2}
-    {"nama" : "aladin", "jumlah":2}
+    {nama : "sherlock", jumlah: 2},
+    {nama : "lupin", jumlah: 2},
+    {nama : "aladin", jumlah: 2}
   ];
+  
+
+  function submit() {
+    let selectedbuku =
+    document.getElementById ("buku").value;
+
+    if (!buku) {
+    alert("buku tidak ditemukan")
+  }
+
+
+
+
+  }
 </script>
 
 </body>
