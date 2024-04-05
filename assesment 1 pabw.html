@@ -15,7 +15,7 @@
   <main>
   
   <label for="jumlah">jumlah buku: </label>
-  <input type="number" id="jumlah" name="jumlah" min="0">
+  <input type="number" id="jumlah" name="jumlah" min="0"><br><br>
   <select id="buku" name="buku" id="buku">
     <option id="sherlock" value="sherlock">sherlock</option>
     <option id="lupin" value="lupin">lupin</option>
@@ -36,7 +36,7 @@ let buku = [
     {"nama": "aladin", "jumlah": 2}
 ];
 
-function cekBuku() {
+function submit() {
     let jumlah = document.getElementById("jumlah").value;
     let bukuTerpilih = document.getElementById("buku").value;
     let bukuDitemukan = false;
@@ -50,16 +50,16 @@ function cekBuku() {
         if (buku[i].nama === bukuTerpilih) {
             bukuDitemukan = true;
             if (parseInt(jumlah) > buku[i].jumlah) {
-                alert("Jumlah buku tidak tersedia!");
+                alert("Jumlah buku tidak tersedia");
               } else {
-                alert("Silahkan ambil buku Anda.");
+                alert("Silahkan ambil buku Anda");
             }
             break;
         }
     }
 
     if (!bukuDitemukan) {
-        alert("Buku tidak ditemukan!");
+        alert("Buku tidak ditemukan");
     }
 }
 </script>
