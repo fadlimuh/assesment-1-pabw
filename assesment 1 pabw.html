@@ -19,7 +19,7 @@
   <select id="buku" name="buku" id="buku">
     <option id="sherlock" value="sherlock">sherlock</option>
     <option id="lupin" value="lupin">lupin</option>
-    <option id="aladin" value="aladin">lupin</option>
+    <option id="aladin" value="aladin">aladin</option>
   </select> <br><br>
 
   <button onclick="submit()"> cek ketersedian buku</button>
@@ -30,25 +30,23 @@
   </main>
 
 <script>
-  let buku = [
-    {nama : "sherlock", jumlah: 2},
-    {nama : "lupin", jumlah: 2},
-    {nama : "aladin", jumlah: 2}
-  ];
-  
+let buku = [
+    {"nama": "sherlock", "jumlah": 2},
+    {"nama": "lupin", "jumlah": 2},
+    {"nama": "aladin", "jumlah": 2}
+];
 
-  function submit() {
-    let selectedbuku =
-    document.getElementById ("buku").value;
-
-    if (!buku) {
-    alert("buku tidak ditemukan")
-  }
+function cekBuku() {
+    let jumlah = document.getElementById("jumlah").value;
+    let bukuTerpilih = document.getElementById("buku").value;
+    let bukuDitemukan = false;
+    
 
 
-
-
-  }
+    if (!bukuDitemukan) {
+        alert("Buku tidak ditemukan!");
+    }
+}
 </script>
 
 </body>
