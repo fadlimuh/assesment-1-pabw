@@ -51,8 +51,12 @@ function cekBuku() {
             bukuDitemukan = true;
             if (parseInt(jumlah) > buku[i].jumlah) {
                 alert("Jumlah buku tidak tersedia!");
-    
-
+              } else {
+                alert("Silahkan ambil buku Anda.");
+            }
+            break;
+        }
+    }
 
     if (!bukuDitemukan) {
         alert("Buku tidak ditemukan!");
