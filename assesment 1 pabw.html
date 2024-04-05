@@ -40,6 +40,17 @@ function cekBuku() {
     let jumlah = document.getElementById("jumlah").value;
     let bukuTerpilih = document.getElementById("buku").value;
     let bukuDitemukan = false;
+
+    if (jumlah === "") {
+        alert("Masukkan jumlah buku!");
+        return;
+    }
+
+    for (let i = 0; i < buku.length; i++) {
+        if (buku[i].nama === bukuTerpilih) {
+            bukuDitemukan = true;
+            if (parseInt(jumlah) > buku[i].jumlah) {
+                alert("Jumlah buku tidak tersedia!");
     
 
 
